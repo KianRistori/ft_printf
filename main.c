@@ -6,17 +6,18 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 15:09:53 by kristori          #+#    #+#             */
-/*   Updated: 2022/10/21 14:53:00 by kristori         ###   ########.fr       */
+/*   Updated: 2022/10/24 15:39:07 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 int main()
 {
-    int x = 546365;
-    printf("%x\n", x);
-    ft_printf("%x", x);
+    int i;
+    i = ft_printf("%p\n", "fdsgfdgf");
+    ft_printf("%d\n", i);
     return 0;
 }

@@ -6,22 +6,25 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 15:06:12 by kristori          #+#    #+#             */
-/*   Updated: 2022/10/21 14:53:17 by kristori         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:52:06 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <stdint.h>
 
-int     ft_printf(const char * format, ...);
-void    ft_putchar(char c);
-void    ft_putstr(char *str);
-void	ft_putnbr(int nb);
-void    ft_print_unsigned_decimal(unsigned int nb);
-void	ft_putnbr_hex(int nb);
+int		ft_printf(const char *format, ...);
+int 	ft_putchar(char c);
+int     ft_printstr(char *str);
+int 	ft_putnbr(int nb);
+int 	ft_print_unsigned_decimal(unsigned int nb);
+int 	ft_printhex(unsigned int nb, const char format);
+int 	ft_printptr(unsigned long long ptr);
+char    *ft_itoa(unsigned int nbr);
 
 #endif

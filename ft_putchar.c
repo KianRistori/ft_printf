@@ -6,13 +6,14 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 15:04:54 by kristori          #+#    #+#             */
-/*   Updated: 2022/10/20 15:24:59 by kristori         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:19:30 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    ft_putchar(char c)
+int	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
+	return (1);
 }
