@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:20:05 by kristori          #+#    #+#             */
-/*   Updated: 2022/10/24 14:51:47 by kristori         ###   ########.fr       */
+/*   Updated: 2022/10/26 14:21:41 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	ft_puthex(unsigned int nb, const char format)
 int	ft_printhex(unsigned int nb, const char format)
 {
 	if (nb == 0)
-		return ft_putchar('0');
+		return (ft_putchar('0'));
 	else
 		ft_puthex(nb, format);
 	return (ft_hexlen(nb));

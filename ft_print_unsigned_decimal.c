@@ -6,18 +6,30 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 10:36:00 by kristori          #+#    #+#             */
-/*   Updated: 2022/10/24 14:46:01 by kristori         ###   ########.fr       */
+/*   Updated: 2022/10/26 14:22:52 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <string.h>
 
-static int	ft_absolute_value(unsigned int nbr)
+static char	*ft_strcpy(char *dest, const char *src)
 {
-	return (nbr);
+	int	i;
+
+	i = 0;
+	if (!dest)
+		return (NULL);
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
-static int	ft_intlen(unsigned int nbr)
+int	ft_intlen_unsigned(unsigned int nbr)
 {
 	int	i;
 
@@ -30,21 +42,28 @@ static int	ft_intlen(unsigned int nbr)
 	return (i);
 }
 
-char	*ft_itoa(unsigned int nbr)
+char	*ft_itoa_unsigned(unsigned int nbr)
 {
 	char	*ris;
 	int		len;
 
-	len = ft_intlen(nbr);
+	if (!nbr)
+		return (NULL);
+	len = ft_intlen_unsigned(nbr);
 	ris = (char *)malloc(sizeof(char) * (len + 1));
+	if (!ris)
+		return (NULL);
+	if (nbr == 4294967295)
+	{
+		ft_strcpy(ris, "4294967295");
+		return (ris);
+	}
 	ris[len] = '\0';
-	if (nbr == 0)
-		ris[0] = '0';
 	while (nbr != 0)
 	{
-		len--;
-		ris[len] = ft_absolute_value(nbr % 10) + '0';
+		ris[len - 1] = (nbr % 10) + '0';
 		nbr = nbr / 10;
+		len--;
 	}
 	return (ris);
 }
@@ -59,7 +78,7 @@ int	ft_print_unsigned_decimal(unsigned int nb)
 		print_len += ft_putchar('0');
 	else
 	{
-		ris = ft_itoa(nb);
+		ris = ft_itoa_unsigned(nb);
 		print_len += ft_printstr(ris);
 		free(ris);
 	}

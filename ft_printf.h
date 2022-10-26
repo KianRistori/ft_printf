@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 15:06:12 by kristori          #+#    #+#             */
-/*   Updated: 2022/10/24 14:52:06 by kristori         ###   ########.fr       */
+/*   Updated: 2022/10/26 14:25:29 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,16 @@
 # include <stdint.h>
 
 int		ft_printf(const char *format, ...);
-int 	ft_putchar(char c);
-int     ft_printstr(char *str);
-int 	ft_putnbr(int nb);
-int 	ft_print_unsigned_decimal(unsigned int nb);
-int 	ft_printhex(unsigned int nb, const char format);
-int 	ft_printptr(unsigned long long ptr);
-char    *ft_itoa(unsigned int nbr);
+int		ft_putchar(char c);
+int		ft_printstr(char *str);
+int		ft_printstr_nbr(char *str);
+int		ft_putnbr(int nb);
+int		ft_print_unsigned_decimal(unsigned int nb);
+int		ft_printhex(unsigned int nb, const char format);
+int		ft_printptr(unsigned long long ptr);
+char	*ft_itoa(int nbr);
+char	*ft_itoa_unsigned(unsigned int nbr);
+int		ft_intlen_unsigned(unsigned int nbr);
+int		ft_intlen(int nbr);
 
 #endif

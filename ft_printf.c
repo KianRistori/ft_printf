@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 14:29:22 by kristori          #+#    #+#             */
-/*   Updated: 2022/10/24 14:51:51 by kristori         ###   ########.fr       */
+/*   Updated: 2022/10/26 14:22:28 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	ft_printf(const char *format, ...)
 			i++;
 		}
 		else
-		 	print_len += ft_putchar(format[i]);
+			print_len += ft_putchar(format[i]);
 		i++;
 	}
 	va_end(list);

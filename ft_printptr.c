@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:33:42 by kristori          #+#    #+#             */
-/*   Updated: 2022/10/24 15:47:57 by kristori         ###   ########.fr       */
+/*   Updated: 2022/10/25 10:47:25 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_printptr(unsigned long long ptr)
 	{
 		print_len += write(1, "0x", 2);
 		ft_putptr(ptr);
-		print_len = ft_ptrlen(ptr);
+		print_len += ft_ptrlen(ptr);
 	}
 	return (print_len);
 }
