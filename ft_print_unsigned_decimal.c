@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 10:36:00 by kristori          #+#    #+#             */
-/*   Updated: 2022/10/26 14:22:52 by kristori         ###   ########.fr       */
+/*   Updated: 2022/10/27 15:42:02 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static char	*ft_strcpy(char *dest, const char *src)
 	return (dest);
 }
 
-int	ft_intlen_unsigned(unsigned int nbr)
+static int	ft_intlen_unsigned(unsigned int nbr)
 {
 	int	i;
 
@@ -42,7 +42,7 @@ int	ft_intlen_unsigned(unsigned int nbr)
 	return (i);
 }
 
-char	*ft_itoa_unsigned(unsigned int nbr)
+static char	*ft_itoa_unsigned(unsigned int nbr)
 {
 	char	*ris;
 	int		len;

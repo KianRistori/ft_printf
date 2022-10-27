@@ -6,13 +6,13 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 15:51:05 by kristori          #+#    #+#             */
-/*   Updated: 2022/10/26 10:45:10 by kristori         ###   ########.fr       */
+/*   Updated: 2022/10/27 15:45:22 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_intlen(int nbr)
+static int	ft_intlen(int nbr)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ static int	ft_absolute_value(int nbr)
 	return (nbr);
 }
 
-char	*ft_itoa(int nbr)
+static char	*ft_itoa(int nbr)
 {
 	char	*ris;
 	int		len;
